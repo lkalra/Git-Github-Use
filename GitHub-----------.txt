@@ -1,0 +1,41 @@
+GitHub-----------
+
+to conect your git to github - git remote add origin "url(github repo)" 
+git remote -v - will show url attached to the folder 
+git push origin master - to push file in repo
+
+you cannot add anything to someone else repo 
+so on top right use fork and copy repo to your github 
+
+thn copy your code link from github
+
+to clone it on your system - git clone url-will download that folder
+cat file name - everything in file 
+
+
+git remote add upstream(original url from where you forked it) url
+git remote -v will show your url as origin and original url as upstream 
+
+never comit on main branch 
+git branch kalra
+git checkout kunal 
+branch will be changed to kalra now 
+
+
+now to checkout if your fork copy is behind the original data 
+git checkout main
+git fetch --al --prune
+git reset --hard upstream/main
+git log both will have same comits
+
+to push the same to your fork copy
+git push origin main
+
+git pull upstream main - internally does the git fetch thing only - local folder gets sync with the original data
+git push origin main - pushes lcal data to your fork copy
+
+merge all comits copy id of the comit (jiske upr se sb merge krne hai) 
+git log
+git rebase -i url
+
+choose the comits you want to squash and change pick to s 

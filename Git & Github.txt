@@ -1,0 +1,144 @@
+Git & Github
+
+
+directory - folder
+cd - change directory - enter folder
+
+git coomands
+
+clone - bring repo from github into folder on local
+add = track changes 
+commit - save your files in git
+push - upload git commits to github repo
+pull - to bring changes from github into local machine   
+
+
+create repo on github with readme file
+git clone url  pull files from github
+cd folder name - to enter inside folder
+to check if you're in git repo -> ls -la
+.git saves history 
+edit readme file thn do git status it will show modified( git knows the file but file got modified)
+if i make new file in folder and do git status file will be shown as untracked because git does not know about the file
+
+to add thaat file - git add . -> . tracks all file modified and untracked
+git status - all files will be tracked
+
+git commit -m "added file(shows heading of file)" -m"description"
+will see the changes 
+
+git push origin master -> push the updated files in guthub
+
+cat file_name - to print any file
+
+
+
+//if you start folder in vs code
+
+cd ../folder_name
+add any file
+git init 
+git status - untracked
+git add.
+git status 
+git commit -m "added"
+git push wont work here because it doesnot know where to push these files
+create empty repo on github 
+copy repo url
+git remote add origin url
+to check the remote repo - git remote -v
+git push origin master //if i donot want to type this everytime i can say - git push -u origin master -> can use git push -u means upstream (setting default repo)
+after my changes i can force my updated code in github by git push -u -f origin master
+
+
+//branching
+git branch - shows branch with * 
+git checkout -b feature - new branch
+branch will be changed and now git branch will show * on new branch(currently we are working on)
+git checkout branch_name - switch branches 
+
+edit the file when we're in diff branch thn master
+git status will show modified 
+git add .
+git commit -m "updated in feature branch"
+now if i change branch to master no updates will be shown
+git diff feaature - to show diff in both branches
+
+//git merge feature - merge both branches -> not common merge through github pull request
+
+git checkout feature - change branch to make pull request
+git push - will ask to push current(feature) branch make it upstream
+git push -u origin feature
+
+on github you'llsee to create pull request
+by arrow b/w 2 branches you can see which branch is merging in which branch
+create pull request
+after checking the code owner can merge the code
+
+now change branch locally to master to work on new feature1 but you''ll see that the file is not updated so you have to pull it from github
+git pull origin master
+code locally updated
+to delete that feature branch(already merged) git branch -d branch_name
+git branch will show only master branch now
+
+//merge conflicts
+git checkout -b feature1 -> new branch
+edit new file
+git status - shows modified file
+git diff - will show the diff 
+git add . = git commit -am"only works for modified files" - else do add . to add all files
+git checkout master - change branch
+now change the same line of code in same file 
+
+//if we try to merge these two branch it'll be merge conflict
+git checkout feature1 - wont letme do it cause of made changes on same lines and files on master branch will be overridden
+git status - shows modified file
+git commit -am "add" - saved file in master branch
+git checkout feature1 
+git diff master - feature1 branch selected
+git merge master - shows conflict
+edit manually in code
+git status - shows both modified(branches)
+git commit -am "updated master"
+
+//undo the commits
+edit file
+git status - shows modified (not staged)
+git add .
+git status - shows modified (staged)
+git reset file_name - undo the above staging
+git status - unstaged modified fie
+git add .
+git commit -m"undoing commit"
+git reset HEAD~1(points towards last commit) - undo the commits
+git status will show unstaged uncommited last 
+
+git log - to get log (its in reversed order)
+to go back to certain commit copy the hashID
+git reset hashID - unstaged commits from git (data will be thr)
+
+//to delete the data also
+git log thn copy the hashID
+git reset --hard hashID -> will point to the specific commit you made and will delete everything you did after that
+
+
+//git stash -> to put certain data on backstage you can retreive that afterwords 
+
+
+//fork - copy of repo - make changes - to merger create pull request 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+Git---------------
+
+ls - shows if anything thr
+
+mkdir newfolder - creates folder
+
+cd newfolder - enters folder
+
+history of file is in .git folder to get it - git init
+enters ls -a to see if we are in .git folder 
+
+create new file - touch names.txt
+git status shows untracked files
+
+to make it track - git add.names.txt
+if we do git status now it names.txt file will turn into green
+
+git commit -m "names.txt file added"
+git status will show no changes as we did not change anything
+
+to add text in names.txt file - vi names.txt
+lakshay......
+
+will show whatever in txt file - cat names.txt
+now when we will do git status it'll show modified with red color(not saved)
+
+to save everything - git add names.txt
+will do - git status (means saved with green color)
+
+git commit -m "names.txt file modified"
+it will show 1 file changed(names.txt) 1 insertion(lakshay 1 line)
+
+git log - will show once file added second modified file
+
+
+rm -rf names.txt - will delete the selected file
+git status - will show file deleted
+git add names.txt
+git commit -m"names.txt file deleted"
+git log - will update as names.txt file deleted 
+
+
+to remove commit - copy the hashid beloe it whatever the commits will be above it will be reset to before level
+
+git reset paste hashid
+now git log will show only remaining commit
+
+to put the specific commit backstage - git add names.txt
+git status- it will show names.txt file deleted 
+
+putting this file backstage - touch surnames.txt 
+git add . = git add names.txt
+git status - will show renamed file name
+
+
+now if i want to put specific thing backstage so i do not lose it 
+
+vi surnames.txt (vi = entering text in file) 
+touch houses.txt
+git add . 
+git status
+
+will shw renamed names.txt - houses.txt
+new file surnames.txt
+
+git stash
+git status 
+git log
+
+will show the first stage of file
+
+
+to get it back - git stash pop  will get files from backstage to delete it git stash clear
+
+
+
+
+
+
+
+
+
+
